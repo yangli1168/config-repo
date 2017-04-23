@@ -1,0 +1,65 @@
+server:
+  port: 8066
+      
+scheduling:  
+  populatelinecache: 0 0/30 * * * ?
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+  pwd: aB~fVS'XVT}7Z4R':]/7*bt-Y(kMZ7_J
+  max:
+    conn: 100
+    idle: 10
+   
+mq:
+  broker:
+    url: ssl://112.74.133.11:61617
+    username: user
+    password: 7hevadAPumexarethUPE7ewRAP87Truc
+  topic:
+    name:
+      manage.event: management-event
+  queue:
+    name:
+      audit.log: audit-logs
+      push.msg: send-push-msg
+      sms: send-sms
+      rating.driver: rating-driver
+  client:
+    audit.log: xinqushi-auditlog-${random.int[1024,2048]}
+    rating.driver: xinqushi-ratingd-${random.int[2014,2048]}
+    sms: xinqushi-sms-${random.int[1024,2048]}
+    push.msg: xinqushi-push-${random.int[1024,2048]}
+
+jdbc:
+  driverClass: com.mysql.jdbc.Driver
+
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          actuate: WARN
+    net:
+      xinqushi: INFO
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+      
+ribbon:
+  ConnectTimeout: 30000
+  ReadTimeout: 30000
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+  OkToRetryOnAllOperations: true
+  ServerListRefreshInterval: 2000
+  MaxHttpConnectionsPerHost: 100
+  MaxTotalHttpConnections: 300
+    
