@@ -1,0 +1,24 @@
+sms:
+  verifyCode:
+    timeout: 120
+  yuntonxun:
+    service: app.cloopen.com
+    port: 8883
+    accountSid: 8a48b5514eaf512c014eb8fbe4c60c7d
+    authToken: 046a81db4d8d47859988839d876aa459
+    appId: 8a48b5514ecd7fa8014ed383a01e097b
+  yunpian:
+    url: http://yunpian.com/v1/sms/tpl_send.json
+    automatch:
+      url: http://yunpian.com/v1/sms/send.json
+    apikey: 7df774863438a9c155a2e030fc5dd590
+  juhe:
+    url: http://v.juhe.cn/sms/send
+    apikey: 5db47b683d9ca1dfecb9d0a277239093
+    
+url:
+  coupon:
+    rule: http://www.uto360.com/coupon-rule.html
+    
+special:
+  phone: 18683957180
