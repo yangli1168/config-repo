@@ -14,9 +14,9 @@ redis:
    
 mq:
   broker:
-    url: ssl://112.74.133.11:61617
-    username: user
-    password: 7hevadAPumexarethUPE7ewRAP87Truc
+    url: ssl://127.0.0.1:61617
+    username: admin
+    password: admin
   topic:
     name:
       manage.event: management-event
