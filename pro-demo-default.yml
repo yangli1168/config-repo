@@ -7,16 +7,16 @@ scheduling:
 redis:
   host: 127.0.0.1
   port: 6379
-  pwd: aB~fVS'XVT}7Z4R':]/7*bt-Y(kMZ7_J
+  pwd: 123456
   max:
     conn: 100
     idle: 10
    
 mq:
   broker:
-    url: ssl://112.74.133.11:61617
-    username: user
-    password: 7hevadAPumexarethUPE7ewRAP87Truc
+    url: ssl://127.0.0.1:61617
+    username: admin
+    password: admin
   topic:
     name:
       manage.event: management-event
