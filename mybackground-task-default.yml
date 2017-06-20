@@ -41,7 +41,7 @@ write:
   jdbc:
     url: jdbc:mysql://127.0.0.1:3306/uto?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
     username: root
-    password: root
+    password: yangli
   c3p0:
     initialPoolSize: 5
     acquireIncrement: 5
@@ -62,7 +62,7 @@ read:
   jdbc:
     url: jdbc:mysql://127.0.0.1:3306/uto?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
     username: root
-    password: root
+    password: yangli
   c3p0:
     initialPoolSize: 5
     acquireIncrement: 3
