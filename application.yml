@@ -4,3 +4,6 @@ sms:
     
 special:
   phone: 13588888888
+  
+report:
+  enable: true
