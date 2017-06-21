@@ -37,7 +37,7 @@ jdbc:
 
 write:
   jdbc:
-    url: jdbc:mysql://127.0.0.1:3306/uto?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&useSSL=true
+    url: jdbc:mysql://127.0.0.1:3306/uto?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&useSSL=false
     username: root
     password: yangli
   c3p0:
