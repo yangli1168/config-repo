@@ -11,6 +11,11 @@ redis:
   max:
     conn: 100
     idle: 10
+    
+token:
+  expiry:
+    user: 2592000
+    manage: 86400
    
 mq:
   broker:
