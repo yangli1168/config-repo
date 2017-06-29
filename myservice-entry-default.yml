@@ -1,0 +1,61 @@
+name: '{cipher}a183ac4f6deb9209d4d9616d295e0147719286989ce771a438f06986f0b3b0e9'
+
+server:
+  port: 8090
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: false
+
+zuul:
+  routes:
+    pro:
+      path: /xinqushi/**
+      serviceId: pro-demo
+      stripPrefix: false
+
+ribbon:
+  ConnectTimeout: 30000
+  ReadTimeout: 30000
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+  OkToRetryOnAllOperations: true
+  ServerListRefreshInterval: 2000
+  MaxHttpConnectionsPerHost: 100
+  MaxTotalHttpConnections: 300
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+
+redis:
+  url: 127.0.0.1
+  port: 6379
+  pwd: 123456
+  cache:    
+    user: 0
+    manage: 1
+
+request:
+  versionCheck: true
+  ios:
+    driver: 1.0.0
+    passenger: 1.0.0
+  android:
+    driver: 1.0.0
+    passenger: 1.0.0
+
+ip:
+  whitesheet: 0:0:0:0:0:0:0:1,127.0.0.1
+  
+filter:
+  skip:
+    uris: [/user/client/register,/user/login,/user/reset/password,/user/forget/password,/client/captcha,/client/captcha/stream]
