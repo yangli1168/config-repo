@@ -14,6 +14,7 @@ redis:
     pattern:
       reserv: reservation\.(\d+)\..*
       dwaiting: reservation_driver_waiting\.(\d+)*
+      activity: expire:activity\.(\d+)\..*
   max:
     conn: 100
     idle: 10
@@ -37,10 +38,12 @@ mq:
       push.msg: send-push-msg
       sms: send-sms
       rating.driver: rating-driver
-  reserv:
+    reserv:
       check: reservation-check
     driver:
       waiting: reservation-driver-waiting
+    activity:
+      check: activity-check
   client:
     audit.log: xinqushi-auditlog-${random.int[1024,2048]}
     rating.driver: xinqushi-ratingd-${random.int[2014,2048]}
