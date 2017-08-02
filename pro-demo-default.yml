@@ -93,7 +93,7 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
     healthcheck:
-      enabled: true
+      enabled: false
       
 ribbon:
   ConnectTimeout: 30000
@@ -104,4 +104,13 @@ ribbon:
   ServerListRefreshInterval: 2000
   MaxHttpConnectionsPerHost: 100
   MaxTotalHttpConnections: 300
-    
+  
+feign:
+  okhttp:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+    response:
+      enabled: true
