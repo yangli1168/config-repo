@@ -1,6 +1,9 @@
 server:
   port: 8761
 
+spring:
+  profiles: default
+
 eureka:
   datacenter: chengdu-local
   environment: dev
