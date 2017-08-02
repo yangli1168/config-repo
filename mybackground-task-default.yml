@@ -27,6 +27,7 @@ mq:
       sms: send-sms
       rating.driver: rating-driver
       transportDep.report: transportDep-report
+      activity.check: activity-check
   client:
     audit.log: xinqushi-auditlog-${random.int[1024,2048]}
     rating.driver: xinqushi-ratingd-${random.int[2014,2048]}
