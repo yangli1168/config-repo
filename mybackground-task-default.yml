@@ -34,6 +34,7 @@ mq:
     sms: xinqushi-sms-${random.int[1024,2048]}
     push.msg: xinqushi-push-${random.int[1024,2048]}
     transportDep.report: xinqushi-report-${random.int[1024,2048]}
+    activity.check: xinqushi.activity-${random.int[1024,2048]}
 
 jdbc:
   driverClass: com.mysql.jdbc.Driver
