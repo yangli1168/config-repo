@@ -26,7 +26,7 @@ token:
    
 mq:
   broker:
-    url: ssl://127.0.0.1:61617
+    url: tcp://127.0.0.1:61616
     username: admin
     password: admin
   topic:
