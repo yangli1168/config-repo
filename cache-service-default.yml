@@ -14,7 +14,7 @@ redis:
     pattern:
       reserv: reservation\.(\d+)\..*
       dwaiting: reservation_driver_waiting\.(\d+)*
-      activity: activity\.(\d+)\..*
+      activity: expire:activity\.(\d+)\..*
   max:
     conn: 100
     idle: 10
